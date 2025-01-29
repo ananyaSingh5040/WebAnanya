@@ -1,0 +1,39 @@
+/* content, padding, border,margin */
+*{
+    padding: 0;
+    margin: 0;
+    /* A good practice to start your page with. */
+}
+.para1{
+    /* height, width, border */
+    background-color: aqua;
+    border: 2px solid black;
+    height: 100px;
+    width: 300px;
+    /* border-bottom: 30px solid black; */
+    /* padding: 50px; */
+    padding: 30px 40px 20px 50px; /* top right bottom left*/
+    margin: 50px;
+    
+    
+}
+.para2{
+    /* height, width, border */
+    background-color: rgb(255, 0, 144);
+    border: 2px solid black;
+    height: auto;
+    width: 300px;
+
+
+    
+}
+.para3{
+    /* height, width, border */
+    background-color: rgb(166, 255, 0);
+    border: 2px solid black;
+    height: 100px;
+    width: 300px;
+    
+
+    
+}
