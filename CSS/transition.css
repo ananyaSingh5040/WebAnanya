@@ -1,0 +1,14 @@
+.box{
+    background-color: beige;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    /* transition-property: width; */
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+}
+.box:hover{
+    width: 1000px;
+    background-color: blueviolet;
+}

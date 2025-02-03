@@ -1,0 +1,31 @@
+.bigcon{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container {
+  background-color: beige;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  /* margin: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* shorthand notation: transition property, transition duration , transition - timing function, transition- delay */
+  transition: all 0.5s linear 0s;
+}
+p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 30px;
+}
+.container:hover {
+  /* transform: rotate(45deg); */
+  transform: scale(1.10);
+  /* transform: skew(45deg); */
+  /* transform: translate(0px, -500px); */
+}
