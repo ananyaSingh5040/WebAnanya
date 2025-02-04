@@ -52,3 +52,10 @@ let getExp = (a, b) => {
   return a ** b;
 };
 console.log("The value is: ", getExp(1, 2));
+
+//Default Parameter: can add objects, arrays, functions too.
+function printName(myName = "No name Passed",lname= myName.toUpperCase()) {
+  console.log("Name= ", myName,lname);
+}
+printName("Ananya");
+//NULL send karoge toh store karlega par undefined send karoge toh default print hoga.
