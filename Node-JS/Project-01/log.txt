@@ -1,0 +1,8 @@
+Date & Time: 1739381842355, Method: GET, Path: /users
+Date & Time: 1739381843831, Method: GET, Path: /users
+Date & Time: 1739383674044, Method: GET, Path: /users
+Date & Time: 1739383698212, Method: GET, Path: /users
+Date & Time: 1739460983298, Method: GET, Path: /users/1
+Date & Time: 1739460991482, Method: GET, Path: /users/100000
+Date & Time: 1739461003364, Method: GET, Path: /users/100000
+Date & Time: 1739461011540, Method: GET, Path: /users/100000
