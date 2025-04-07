@@ -1,34 +1,20 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose"); // Used for connection with mongoDb and much more
-const fs = require("fs");
-// require("./schedular1");
-const users = require("./data/fakeData.json");
-const port = 8000;
+const { connectMongoDb } = require("./connection");
+const { logReqRes } = require("./middlewares/logReqRes");
 const userRouter = require("./routes/user");
+const port = 8000;
 
-//Connection - promise return karta i.e then.
-mongoose.connect("mongodb://127.0.0.1:27017/practice-app-1")
-.then(()=>console.log("MongoDB connected!"))
-.catch((err)=>{console.log("Error in connecting DB: ",err)});
+//Connection
+connectMongoDb("mongodb://127.0.0.1:27017/practice-app-1")
+  .then(() => console.log("MongoDB connected!"));
 
-
-
-//MIDDLEWARE - kind of plugin, app.use se start hote hai(zaroori nai) should have next tho.
-
-app.use(express.urlencoded({ extended: false }));
-
-app.use((req, res, next) => {
-  console.log("Hello from middleware 1");
-  next();
-});
-app.use((req,res,next)=>{
-    fs.appendFile("./data/log.txt",`\n ${Date.now()} ${req.method} ${req.path} ${req.ip}`,(err,data)=>{})
-    next();
-})
+// Middlewares:
+app.use(express.urlencoded({extended: false}));
+app.use(logReqRes("./data/log.txt"));
 //Routes:
-// Jab bhi users pe request aayegi, its gonna add this to the routes
-app.use("/users",userRouter);
+app.use("/api/users", userRouter);
+
 app.listen(port, () => {
   console.log("Sever running on port: ", port);
 });
